@@ -1,0 +1,109 @@
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-active) 100%
+  );
+  padding: var(--space-20);
+}
+
+.home-content {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-32);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--color-card-border);
+}
+
+.home-content h1 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-10);
+  font-weight: var(--font-weight-semibold);
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-24);
+  font-size: var(--font-size-base);
+}
+
+.login-box {
+  margin-top: var(--space-20);
+  text-align: left;
+}
+
+.login-box h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-20);
+  text-align: center;
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.login-box form button {
+  width: 100%;
+  margin-top: var(--space-20);
+}
+
+.test-accounts {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-16);
+  margin-top: var(--space-20);
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+.test-accounts h3 {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.test-accounts p {
+  margin: var(--space-6) 0;
+  font-family: var(--font-family-mono);
+  background-color: var(--color-surface);
+  padding: var(--space-6);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+/* ========== Dashboard Header ========== */
+
+.dashboard-header {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-active) 100%
+  );
+  color: var(--color-btn-primary-text);
+  padding: var(--space-24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-24);
+}
+
+.header-left h1 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-6);
+  font-weight: var(--font-weight-semibold);
+}
+
+.header-left p {
+  font-size: var(--font-size-base);
+  opacity: 0.9;
+}
