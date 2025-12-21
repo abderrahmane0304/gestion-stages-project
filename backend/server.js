@@ -1,12 +1,6 @@
-// ================================================================================
-// BACKEND EXPRESS.JS - CONFIGURATION COMPLÈTE
-// ================================================================================
-// Fichier: server.js
-// Installation: npm install express mysql2 sequelize cors body-parser dotenv
+// CONFIGURATION BACKEND EXPRESS.JS
 
-// ================================================================================
 // 1. CONFIGURATION DE L'APPLICATION
-// ================================================================================
 
 const express = require('express');
 const cors = require('cors');
@@ -20,9 +14,7 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
-// ================================================================================
 // 2. CONNEXION À LA BASE DE DONNÉES (SEQUELIZE)
-// ================================================================================
 
 const Sequelize = require('sequelize');
 
@@ -38,9 +30,7 @@ const sequelize = new Sequelize('gestion_stages', 'root', 'Nadia@2003', {
   }
 });
 
-// ================================================================================
 // 3. MODÈLES SEQUELIZE
-// ================================================================================
 
 // Modèle User
 const User = sequelize.define('User', {
@@ -128,9 +118,7 @@ const Stage = sequelize.define('Stage', {
 User.hasMany(Stage, { foreignKey: 'id_etudiant' });
 Stage.belongsTo(User, { foreignKey: 'id_etudiant' });
 
-// ================================================================================
 // 4. CONTROLLERS - LOGIQUE MÉTIER
-// ================================================================================
 
 // ========== CONTROLLER USERS ==========
 
@@ -380,9 +368,7 @@ const getStatistiques = async (req, res) => {
   }
 };
 
-// ================================================================================
 // 5. ROUTES API
-// ================================================================================
 
 // Routes Users
 app.get('/api/users', getAllUsers);
@@ -400,9 +386,7 @@ app.patch('/api/stages/:id/refuser', refuserStage);
 // Route Statistiques
 app.get('/api/statistiques', getStatistiques);
 
-// ================================================================================
 // 6. DÉMARRAGE DU SERVEUR
-// ================================================================================
 
 const PORT = process.env.PORT || 5000;
 
